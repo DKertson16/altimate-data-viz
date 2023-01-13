@@ -11,6 +11,17 @@ function Pagination({ filteredTodos, currentPage, setCurrentPage }) {
 
   return (
     <Flex mt={2} flexDirection="row" flexWrap="nowrap" gap={2}>
+      <Button
+        width="10px"
+        onClick={() => {
+          if (currentPage > 1) {
+            setCurrentPage((currentPage) => currentPage - 1);
+          }
+        }}
+        backgroundColor="white"
+      >
+        {"<"}
+      </Button>
       {pageNumbers.map((number) => (
         <Button
           width="10px"
@@ -20,6 +31,17 @@ function Pagination({ filteredTodos, currentPage, setCurrentPage }) {
           {number}
         </Button>
       ))}
+      <Button
+        width="10px"
+        onClick={() => {
+          if (currentPage < pageNumbers.length) {
+            setCurrentPage((currentPage) => currentPage + 1);
+          }
+        }}
+        backgroundColor="white"
+      >
+        {">"}
+      </Button>
     </Flex>
   );
 }
