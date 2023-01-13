@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Flex } from "@chakra-ui/react";
 
-function Pagination({ filteredTodos, setCurrentPage }) {
+function Pagination({ filteredTodos, currentPage, setCurrentPage }) {
   const pageNumbers = [];
   const totalTodos = filteredTodos.length;
 
@@ -15,26 +15,12 @@ function Pagination({ filteredTodos, setCurrentPage }) {
         <Button
           width="10px"
           onClick={() => setCurrentPage(number)}
-          className="page-link"
+          backgroundColor={number === currentPage ? "blue.300" : "white"}
         >
           {number}
         </Button>
       ))}
     </Flex>
-    // <nav>
-    //   <ul className="pagination">
-    //     {pageNumbers.map((number) => (
-    //       <li key={number}>
-    //         <button
-    //           onClick={() => setCurrentPage(number)}
-    //           className="page-link"
-    //         >
-    //           {number}
-    //         </button>
-    //       </li>
-    //     ))}
-    //   </ul>
-    // </nav>
   );
 }
 

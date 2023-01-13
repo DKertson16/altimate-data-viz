@@ -144,6 +144,7 @@ function DataTable() {
           </Tbody>
           <Pagination
             filteredTodos={filteredTodos}
+            currentPage={currentPage}
             setCurrentPage={setCurrentPage}
           />
         </Table>
