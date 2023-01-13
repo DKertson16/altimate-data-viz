@@ -28,7 +28,6 @@ function DataTable() {
   const [userIdFilter, setUserIdFilter] = useState("");
   const [completedFilter, setCompletedFilter] = useState("all");
   const [currentPage, setCurrentPage] = useState(1);
-  console.log(currentPage);
 
   const filteredTodos = todos
     .filter((todo) => {

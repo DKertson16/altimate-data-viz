@@ -33,9 +33,7 @@ function AddItemForm() {
       },
     });
     const json = await res.json();
-    console.log(json);
     pushTodo(json);
-    console.log("Submitted");
     setLoading(false);
   };
 
