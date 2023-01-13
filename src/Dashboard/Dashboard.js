@@ -14,14 +14,10 @@ function Dashboard() {
   }, []);
 
   return (
-    <Grid templateColumns="repeat(2, 1fr)">
-      <GridItem w="100%">
-        <DataTable />
-      </GridItem>
-      <GridItem w="100%">
-        <AddItemForm />
-      </GridItem>
-    </Grid>
+    <>
+      <AddItemForm />
+      <DataTable />
+    </>
   );
 }
 
